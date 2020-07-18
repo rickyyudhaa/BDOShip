@@ -43,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-1746004106">
@@ -127,6 +127,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1595045008051">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1595045008051" />
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594906960687">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -135,6 +139,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="540" y="294" key="AndroidCreateResourceFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1594735629591" />
+    <state x="461" y="182" key="SettingsEditor" timestamp="1595039591099">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595039591099" />
     <state x="776" y="321" key="chooseDestDirectoryDialog" timestamp="1594907249504">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -147,5 +155,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595037790879" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1595039660218">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1595039660218" />
   </component>
 </project>
