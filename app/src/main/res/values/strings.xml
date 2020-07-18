@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BDOShip</string>
+    <string name="welcome_to">Welcome To</string>
+    <string name="no_prog">Currently You didn’t have any ship progress</string>
+    <string name="add">Add Progress</string>
+    <string name="shipsprog">Your Ship Progress</string>
+    <string name="shiptype">shiptype</string>
+    <string name="whatship">What Ship You want to make?</string>
+</resources>
