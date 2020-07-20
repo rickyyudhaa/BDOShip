@@ -18,7 +18,7 @@ public abstract class Bdoshipdb extends RoomDatabase{
 
     public static synchronized Bdoshipdb getInstance(Context context){
         if (instance == null){
-            instance == Room.databaseBuilder(context.getApplicationContext(),
+            Room.databaseBuilder(context.getApplicationContext(),
                     Bdoshipdb.class, "Bdoshipdb")
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)

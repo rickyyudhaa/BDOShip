@@ -9,6 +9,6 @@ public class chooseship extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chooseship);
+        setContentView(R.layout.choose_ship);
     }
 }

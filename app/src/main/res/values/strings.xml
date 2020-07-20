@@ -6,4 +6,17 @@
     <string name="shipsprog">Your Ship Progress</string>
     <string name="shiptype">shiptype</string>
     <string name="whatship">What Ship You want to make?</string>
+    <string name="speed">Speed : </string>
+    <string name="turn">Turn : </string>
+    <string name="accel">Accel : </string>
+    <string name="brake">Brake : </string>
+    <string name="lt">Lt : </string>
+    <string name="inv">Inventory Slot : </string>
+    <string name="cabins">Crew Cabins : </string>
+    <string name="cannonballs">Cannonballs : </string>
+    <string name="cannon">Cannons : </string>
+    <string name="reload">Reload Time : </string>
+    <string name="percentage">175%</string>
+    <string name="number">111</string>
+    
 </resources>

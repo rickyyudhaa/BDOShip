@@ -1,1 +1,6 @@
-[]
+{
+  "version": 1,
+  "applicationId": "com.example.bdoship",
+  "variantType": "BASE_APK",
+  "elements": []
+}
