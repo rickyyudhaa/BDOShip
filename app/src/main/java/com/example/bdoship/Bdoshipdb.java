@@ -16,16 +16,20 @@ public abstract class Bdoshipdb extends RoomDatabase{
 
     public abstract ShipDao shipDao();
 
+    public abstract MatsDao matsDao();
+
     public static synchronized Bdoshipdb getInstance(Context context){
         if (instance == null){
-            Room.databaseBuilder(context.getApplicationContext(),
+            instance = Room.databaseBuilder(context.getApplicationContext(),
                     Bdoshipdb.class, "Bdoshipdb")
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)
+                    .allowMainThreadQueries()
                     .build();
         }
         return instance;
     }
+
 
     private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback(){
         @Override
@@ -37,9 +41,11 @@ public abstract class Bdoshipdb extends RoomDatabase{
 
     private static class PopulateDBAsyncTask extends AsyncTask<Void, Void, Void>{
         private ShipDao shipDao;
+        private MatsDao matsDao;
 
         private PopulateDBAsyncTask(Bdoshipdb db){
             shipDao = db.shipDao();
+            matsDao = db.matsDao();
         }
 
         @Override

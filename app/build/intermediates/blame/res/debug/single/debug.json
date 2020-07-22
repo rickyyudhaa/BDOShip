@@ -48,6 +48,10 @@
         "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_material_list.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\material_list.xml"
+    },
+    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_proglist.xml.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_proglist.xml"
     },
@@ -114,6 +118,10 @@
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_mat_list.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\mat_list.xml"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",

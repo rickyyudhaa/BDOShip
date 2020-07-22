@@ -28,5 +28,14 @@
         android:src="@drawable/bdoship"
     />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/by"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+    />
 
 </RelativeLayout>

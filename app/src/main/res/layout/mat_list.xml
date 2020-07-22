@@ -123,7 +123,7 @@
             android:id="@+id/ship_lt"
             android:layout_width="@dimen/dp30"
             android:layout_height="wrap_content"
-            android:text="@string/number"
+            android:text="@string/digit5"
             android:layout_toRightOf="@id/weight"
             android:layout_below="@id/ship_icon"
             android:layout_marginTop="10dp"
@@ -142,7 +142,7 @@
             android:id="@+id/ship_inv"
             android:layout_width="@dimen/dp30"
             android:layout_height="wrap_content"
-            android:text="@string/number"
+            android:text="@string/digit5"
             android:layout_below="@id/ship_lt"
             android:layout_toRightOf="@id/inventory"
             />
@@ -160,7 +160,7 @@
             android:id="@+id/ship_cabins"
             android:layout_width="@dimen/dp30"
             android:layout_height="wrap_content"
-            android:text="@string/number"
+            android:text="@string/digit5"
             android:layout_below="@id/ship_inv"
             android:layout_toRightOf="@id/cabins"
             />
@@ -180,7 +180,7 @@
             android:id="@+id/ship_cballs"
             android:layout_width="@dimen/dp30"
             android:layout_height="wrap_content"
-            android:text="@string/number"
+            android:text="@string/digit5"
             android:layout_toRightOf="@id/cballs"
             android:layout_below="@id/ship_icon"
             android:layout_marginTop="10dp"
@@ -200,7 +200,7 @@
             android:id="@+id/ship_cannons"
             android:layout_width="@dimen/dp30"
             android:layout_height="wrap_content"
-            android:text="@string/number"
+            android:text="@string/digit5"
             android:layout_below="@id/ship_lt"
             android:layout_toRightOf="@id/cannons"
             />
@@ -219,7 +219,7 @@
             android:id="@+id/ship_reload"
             android:layout_width="@dimen/dp30"
             android:layout_height="wrap_content"
-            android:text="@string/number"
+            android:text="@string/digit5"
             android:layout_below="@id/ship_cannons"
             android:layout_toRightOf="@id/reload"
             />

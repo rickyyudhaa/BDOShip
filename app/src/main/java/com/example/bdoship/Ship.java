@@ -4,7 +4,9 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "ship_table", foreignKeys = @ForeignKey(entity = User.class, parentColumns = "id", childColumns = "User_id"))
+import java.util.Objects;
+
+@Entity(tableName = "ship_table")
 public class Ship {
 
     @PrimaryKey(autoGenerate = true)
@@ -12,9 +14,9 @@ public class Ship {
 
     private String type, material;
 
-    private int inventory, cabins, cannonballs, cannons, lt;
+    private int inventory, cabins, cannonballs, cannons, lt, speed, turn, accel, brake, reload;
 
-    public Ship(String type, String material, int inventory, int cabins, int cannonballs, int cannons, int lt) {
+    public Ship(String type, String material, int inventory, int cabins, int cannonballs, int cannons, int lt, int speed, int turn, int accel, int brake, int reload) {
         this.type = type;
         this.material = material;
         this.inventory = inventory;
@@ -22,6 +24,11 @@ public class Ship {
         this.cannonballs = cannonballs;
         this.cannons = cannons;
         this.lt = lt;
+        this.speed = speed;
+        this.turn = turn;
+        this.accel = accel;
+        this.brake = brake;
+        this.reload = reload;
     }
 
     public int getId() {
@@ -54,6 +61,26 @@ public class Ship {
 
     public int getLt() {
         return lt;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getTurn() {
+        return turn;
+    }
+
+    public int getAccel() {
+        return accel;
+    }
+
+    public int getBrake() {
+        return brake;
+    }
+
+    public int getReload() {
+        return reload;
     }
 
     public void setId(int id) {

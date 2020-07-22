@@ -24,16 +24,18 @@ import java.util.HashSet;
 public final class Bdoshipdb_Impl extends Bdoshipdb {
   private volatile ShipDao _shipDao;
 
+  private volatile MatsDao _matsDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `ship_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT, `material` TEXT, `inventory` INTEGER NOT NULL, `cabins` INTEGER NOT NULL, `cannonballs` INTEGER NOT NULL, `cannons` INTEGER NOT NULL, `lt` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ship_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT, `material` TEXT, `inventory` INTEGER NOT NULL, `cabins` INTEGER NOT NULL, `cannonballs` INTEGER NOT NULL, `cannons` INTEGER NOT NULL, `lt` INTEGER NOT NULL, `speed` INTEGER NOT NULL, `turn` INTEGER NOT NULL, `accel` INTEGER NOT NULL, `brake` INTEGER NOT NULL, `reload` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `user_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `inventory` INTEGER NOT NULL, `ships` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `material_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `image` TEXT, `price` INTEGER NOT NULL, `barter` INTEGER NOT NULL, `daily` INTEGER NOT NULL, `coin` INTEGER NOT NULL, FOREIGN KEY(`id`) REFERENCES `ship_table`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"40203b5a2da354c05497bf77a0a69d7e\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"72982a4d1fe1ec7cca8cbeac8697e73c\")");
       }
 
       @Override
@@ -66,7 +68,7 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
 
       @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsShipTable = new HashMap<String, TableInfo.Column>(8);
+        final HashMap<String, TableInfo.Column> _columnsShipTable = new HashMap<String, TableInfo.Column>(13);
         _columnsShipTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
         _columnsShipTable.put("type", new TableInfo.Column("type", "TEXT", false, 0));
         _columnsShipTable.put("material", new TableInfo.Column("material", "TEXT", false, 0));
@@ -75,6 +77,11 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
         _columnsShipTable.put("cannonballs", new TableInfo.Column("cannonballs", "INTEGER", true, 0));
         _columnsShipTable.put("cannons", new TableInfo.Column("cannons", "INTEGER", true, 0));
         _columnsShipTable.put("lt", new TableInfo.Column("lt", "INTEGER", true, 0));
+        _columnsShipTable.put("speed", new TableInfo.Column("speed", "INTEGER", true, 0));
+        _columnsShipTable.put("turn", new TableInfo.Column("turn", "INTEGER", true, 0));
+        _columnsShipTable.put("accel", new TableInfo.Column("accel", "INTEGER", true, 0));
+        _columnsShipTable.put("brake", new TableInfo.Column("brake", "INTEGER", true, 0));
+        _columnsShipTable.put("reload", new TableInfo.Column("reload", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysShipTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesShipTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoShipTable = new TableInfo("ship_table", _columnsShipTable, _foreignKeysShipTable, _indicesShipTable);
@@ -116,7 +123,7 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
                   + " Found:\n" + _existingMaterialTable);
         }
       }
-    }, "40203b5a2da354c05497bf77a0a69d7e", "2a4adba0b26144ae1828db43100ddb21");
+    }, "72982a4d1fe1ec7cca8cbeac8697e73c", "4df0fc10ba0968a34986752eee235234");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -169,6 +176,20 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
           _shipDao = new ShipDao_Impl(this);
         }
         return _shipDao;
+      }
+    }
+  }
+
+  @Override
+  public MatsDao matsDao() {
+    if (_matsDao != null) {
+      return _matsDao;
+    } else {
+      synchronized(this) {
+        if(_matsDao == null) {
+          _matsDao = new MatsDao_Impl(this);
+        }
+        return _matsDao;
       }
     }
   }

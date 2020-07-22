@@ -14,13 +14,13 @@ public class Material {
 
     private String name;
 
-    private Blob image;
+    private String image;
 
     private int price;
 
     private boolean barter, daily, coin;
 
-    public Material(String name, Blob image, int price, boolean barter, boolean daily, boolean coin) {
+    public Material(String name, String image, int price, boolean barter, boolean daily, boolean coin) {
         this.name = name;
         this.image = image;
         this.price = price;
@@ -37,7 +37,7 @@ public class Material {
         return name;
     }
 
-    public Blob getImage() {
+    public String getImage() {
         return image;
     }
 
