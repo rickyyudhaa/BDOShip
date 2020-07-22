@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ship_icon"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/shiptypelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ship_icon"
+            android:text="Epheria Improved Sailboat"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/speed"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/shiptypelist"
+            android:layout_toRightOf="@id/ship_icon"
+            />
+
+        <TextView
+            android:id="@+id/ship_speed"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/speed"
+            android:layout_below="@id/shiptypelist"
+            android:text="@string/percentage"
+            />
+
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/speed"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ship_icon"
+            android:text="@string/turn"
+            />
+
+        <TextView
+            android:id="@+id/ship_turn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ship_speed"
+            android:layout_toRightOf="@id/turn"
+            android:text="@string/percentage"
+            />
+
+        <TextView
+            android:id="@+id/accel"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_below="@id/shiptypelist"
+            android:layout_toRightOf="@id/ship_speed"
+            android:text="@string/accel"
+            />
+
+        <TextView
+            android:id="@+id/ship_accel"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/percentage"
+            android:layout_toRightOf="@id/accel"
+            android:layout_below="@id/shiptypelist"
+            />
+
+        <TextView
+            android:id="@+id/brake"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_below="@id/accel"
+            android:layout_toRightOf="@id/ship_turn"
+            android:text="@string/brake"
+            />
+
+        <TextView
+            android:id="@+id/ship_brake"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/percentage"
+            android:layout_below="@id/ship_accel"
+            android:layout_toRightOf="@id/brake"
+            />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:text="@string/lt"
+            android:layout_below="@id/ship_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:id="@+id/ship_lt"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_toRightOf="@id/weight"
+            android:layout_below="@id/ship_icon"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/inventory"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:text="@string/inv"
+            android:layout_below="@id/weight"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:id="@+id/ship_inv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_below="@id/ship_lt"
+            android:layout_toRightOf="@id/inventory"
+            />
+
+        <TextView
+            android:id="@+id/cabins"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:text="@string/cabins"
+            android:layout_below="@id/inventory"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:id="@+id/ship_cabins"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_below="@id/ship_inv"
+            android:layout_toRightOf="@id/cabins"
+            />
+
+        <TextView
+            android:id="@+id/cballs"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:text="@string/cannonballs"
+            android:layout_below="@id/ship_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/dp50"
+            android:layout_toRightOf="@id/ship_lt"
+            />
+
+        <TextView
+            android:id="@+id/ship_cballs"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_toRightOf="@id/cballs"
+            android:layout_below="@id/ship_icon"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/cannons"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:text="@string/cannon"
+            android:layout_below="@id/cballs"
+            android:layout_marginStart="@dimen/dp50"
+            android:layout_toRightOf="@id/ship_inv"
+            />
+
+        <TextView
+            android:id="@+id/ship_cannons"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_below="@id/ship_lt"
+            android:layout_toRightOf="@id/cannons"
+            />
+
+        <TextView
+            android:id="@+id/reload"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:text="@string/reload"
+            android:layout_below="@id/cannons"
+            android:layout_marginStart="@dimen/dp50"
+            android:layout_toRightOf="@id/ship_cabins"
+            />
+
+        <TextView
+            android:id="@+id/ship_reload"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_below="@id/ship_cannons"
+            android:layout_toRightOf="@id/reload"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
