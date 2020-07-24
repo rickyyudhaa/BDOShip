@@ -72,6 +72,10 @@
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_owned_list.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\owned_list.xml"
+    },
+    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },

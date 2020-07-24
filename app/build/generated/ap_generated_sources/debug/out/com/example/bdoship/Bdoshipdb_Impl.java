@@ -24,25 +24,31 @@ import java.util.HashSet;
 public final class Bdoshipdb_Impl extends Bdoshipdb {
   private volatile ShipDao _shipDao;
 
+  private volatile ProgressDao _progressDao;
+
   private volatile MatsDao _matsDao;
+
+  private volatile OwnedprogressDao _ownedprogressDao;
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `ship_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT, `material` TEXT, `inventory` INTEGER NOT NULL, `cabins` INTEGER NOT NULL, `cannonballs` INTEGER NOT NULL, `cannons` INTEGER NOT NULL, `lt` INTEGER NOT NULL, `speed` INTEGER NOT NULL, `turn` INTEGER NOT NULL, `accel` INTEGER NOT NULL, `brake` INTEGER NOT NULL, `reload` INTEGER NOT NULL)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `user_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `inventory` INTEGER NOT NULL, `ships` TEXT)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `material_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `image` TEXT, `price` INTEGER NOT NULL, `barter` INTEGER NOT NULL, `daily` INTEGER NOT NULL, `coin` INTEGER NOT NULL, FOREIGN KEY(`id`) REFERENCES `ship_table`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `progressentity_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_material` INTEGER NOT NULL, `haveMaterial` INTEGER NOT NULL, `reqMaterial` INTEGER NOT NULL, `id_ship` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `material_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `image` TEXT, `price` INTEGER NOT NULL, `qtyperday` INTEGER NOT NULL, `barter` INTEGER NOT NULL, `daily` INTEGER NOT NULL, `coin` INTEGER NOT NULL, FOREIGN KEY(`id`) REFERENCES `ship_table`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ownedprogress_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_ship` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"72982a4d1fe1ec7cca8cbeac8697e73c\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"91769b4da01df49082089d9e4e1e0c0f\")");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `ship_table`");
-        _db.execSQL("DROP TABLE IF EXISTS `user_table`");
+        _db.execSQL("DROP TABLE IF EXISTS `progressentity_table`");
         _db.execSQL("DROP TABLE IF EXISTS `material_table`");
+        _db.execSQL("DROP TABLE IF EXISTS `ownedprogress_table`");
       }
 
       @Override
@@ -91,24 +97,27 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
                   + " Expected:\n" + _infoShipTable + "\n"
                   + " Found:\n" + _existingShipTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsUserTable = new HashMap<String, TableInfo.Column>(3);
-        _columnsUserTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
-        _columnsUserTable.put("inventory", new TableInfo.Column("inventory", "INTEGER", true, 0));
-        _columnsUserTable.put("ships", new TableInfo.Column("ships", "TEXT", false, 0));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysUserTable = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesUserTable = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoUserTable = new TableInfo("user_table", _columnsUserTable, _foreignKeysUserTable, _indicesUserTable);
-        final TableInfo _existingUserTable = TableInfo.read(_db, "user_table");
-        if (! _infoUserTable.equals(_existingUserTable)) {
-          throw new IllegalStateException("Migration didn't properly handle user_table(com.example.bdoship.User).\n"
-                  + " Expected:\n" + _infoUserTable + "\n"
-                  + " Found:\n" + _existingUserTable);
+        final HashMap<String, TableInfo.Column> _columnsProgressentityTable = new HashMap<String, TableInfo.Column>(5);
+        _columnsProgressentityTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
+        _columnsProgressentityTable.put("id_material", new TableInfo.Column("id_material", "INTEGER", true, 0));
+        _columnsProgressentityTable.put("haveMaterial", new TableInfo.Column("haveMaterial", "INTEGER", true, 0));
+        _columnsProgressentityTable.put("reqMaterial", new TableInfo.Column("reqMaterial", "INTEGER", true, 0));
+        _columnsProgressentityTable.put("id_ship", new TableInfo.Column("id_ship", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysProgressentityTable = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesProgressentityTable = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoProgressentityTable = new TableInfo("progressentity_table", _columnsProgressentityTable, _foreignKeysProgressentityTable, _indicesProgressentityTable);
+        final TableInfo _existingProgressentityTable = TableInfo.read(_db, "progressentity_table");
+        if (! _infoProgressentityTable.equals(_existingProgressentityTable)) {
+          throw new IllegalStateException("Migration didn't properly handle progressentity_table(com.example.bdoship.ProgressEntity).\n"
+                  + " Expected:\n" + _infoProgressentityTable + "\n"
+                  + " Found:\n" + _existingProgressentityTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsMaterialTable = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsMaterialTable = new HashMap<String, TableInfo.Column>(8);
         _columnsMaterialTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
         _columnsMaterialTable.put("name", new TableInfo.Column("name", "TEXT", false, 0));
         _columnsMaterialTable.put("image", new TableInfo.Column("image", "TEXT", false, 0));
         _columnsMaterialTable.put("price", new TableInfo.Column("price", "INTEGER", true, 0));
+        _columnsMaterialTable.put("qtyperday", new TableInfo.Column("qtyperday", "INTEGER", true, 0));
         _columnsMaterialTable.put("barter", new TableInfo.Column("barter", "INTEGER", true, 0));
         _columnsMaterialTable.put("daily", new TableInfo.Column("daily", "INTEGER", true, 0));
         _columnsMaterialTable.put("coin", new TableInfo.Column("coin", "INTEGER", true, 0));
@@ -122,8 +131,20 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
                   + " Expected:\n" + _infoMaterialTable + "\n"
                   + " Found:\n" + _existingMaterialTable);
         }
+        final HashMap<String, TableInfo.Column> _columnsOwnedprogressTable = new HashMap<String, TableInfo.Column>(2);
+        _columnsOwnedprogressTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
+        _columnsOwnedprogressTable.put("id_ship", new TableInfo.Column("id_ship", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysOwnedprogressTable = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesOwnedprogressTable = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoOwnedprogressTable = new TableInfo("ownedprogress_table", _columnsOwnedprogressTable, _foreignKeysOwnedprogressTable, _indicesOwnedprogressTable);
+        final TableInfo _existingOwnedprogressTable = TableInfo.read(_db, "ownedprogress_table");
+        if (! _infoOwnedprogressTable.equals(_existingOwnedprogressTable)) {
+          throw new IllegalStateException("Migration didn't properly handle ownedprogress_table(com.example.bdoship.Ownedprogress).\n"
+                  + " Expected:\n" + _infoOwnedprogressTable + "\n"
+                  + " Found:\n" + _existingOwnedprogressTable);
+        }
       }
-    }, "72982a4d1fe1ec7cca8cbeac8697e73c", "4df0fc10ba0968a34986752eee235234");
+    }, "91769b4da01df49082089d9e4e1e0c0f", "69f6f63626fe67441867b5b8d1d29d4d");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -134,7 +155,7 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
 
   @Override
   protected InvalidationTracker createInvalidationTracker() {
-    return new InvalidationTracker(this, "ship_table","user_table","material_table");
+    return new InvalidationTracker(this, "ship_table","progressentity_table","material_table","ownedprogress_table");
   }
 
   @Override
@@ -151,8 +172,9 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
         _db.execSQL("PRAGMA defer_foreign_keys = TRUE");
       }
       _db.execSQL("DELETE FROM `ship_table`");
-      _db.execSQL("DELETE FROM `user_table`");
+      _db.execSQL("DELETE FROM `progressentity_table`");
       _db.execSQL("DELETE FROM `material_table`");
+      _db.execSQL("DELETE FROM `ownedprogress_table`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -181,6 +203,20 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
   }
 
   @Override
+  public ProgressDao progressDao() {
+    if (_progressDao != null) {
+      return _progressDao;
+    } else {
+      synchronized(this) {
+        if(_progressDao == null) {
+          _progressDao = new ProgressDao_Impl(this);
+        }
+        return _progressDao;
+      }
+    }
+  }
+
+  @Override
   public MatsDao matsDao() {
     if (_matsDao != null) {
       return _matsDao;
@@ -190,6 +226,20 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
           _matsDao = new MatsDao_Impl(this);
         }
         return _matsDao;
+      }
+    }
+  }
+
+  @Override
+  public OwnedprogressDao ownedprogressDao() {
+    if (_ownedprogressDao != null) {
+      return _ownedprogressDao;
+    } else {
+      synchronized(this) {
+        if(_ownedprogressDao == null) {
+          _ownedprogressDao = new OwnedprogressDao_Impl(this);
+        }
+        return _ownedprogressDao;
       }
     }
   }

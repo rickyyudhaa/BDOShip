@@ -806,6 +806,7 @@ id content
 id contentPanel
 id custom
 id customPanel
+id dLeft
 id dailies
 id decor_content_parent
 id default_activity_button
@@ -859,14 +860,20 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id owned_days
+id owned_list
+id owned_percentage
+id owned_shiptype
 id packed
 id parent
 id parentPanel
 id percent
+id percenttext
 id proglist_title
 id progress_circular
 id progress_horizontal
 id progress_item
+id progress_text
 id radio
 id rcship
 id reload
@@ -893,6 +900,7 @@ id ship_brake
 id ship_cabins
 id ship_cannons
 id ship_cballs
+id ship_detail
 id ship_icon
 id ship_inv
 id ship_lt
@@ -930,6 +938,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textdays
 id time
 id title
 id titleDividerNoCustom
@@ -1001,6 +1010,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout owned_list
 layout prog_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -1045,7 +1055,10 @@ string cabins
 string cannon
 string cannonballs
 string coins
+string dLefttext
 string dailies
+string days
+string digit2
 string digit3
 string digit5
 string have
@@ -1056,6 +1069,7 @@ string mats_name
 string need
 string no_prog
 string percentage
+string progresstext
 string reload
 string search_menu_title
 string shipsprog

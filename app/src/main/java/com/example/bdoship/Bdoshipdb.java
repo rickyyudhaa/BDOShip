@@ -9,14 +9,18 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Ship.class, User.class, Material.class}, version = 1)
+@Database(entities = {Ship.class, ProgressEntity.class, Material.class, Ownedprogress.class}, version = 3)
 public abstract class Bdoshipdb extends RoomDatabase{
 
     private static Bdoshipdb instance;
 
     public abstract ShipDao shipDao();
 
+    public abstract ProgressDao progressDao();
+
     public abstract MatsDao matsDao();
+
+    public abstract OwnedprogressDao ownedprogressDao();
 
     public static synchronized Bdoshipdb getInstance(Context context){
         if (instance == null){
@@ -42,10 +46,14 @@ public abstract class Bdoshipdb extends RoomDatabase{
     private static class PopulateDBAsyncTask extends AsyncTask<Void, Void, Void>{
         private ShipDao shipDao;
         private MatsDao matsDao;
+        private ProgressDao progressDao;
+        private OwnedprogressDao ownedprogressDao;
 
         private PopulateDBAsyncTask(Bdoshipdb db){
             shipDao = db.shipDao();
             matsDao = db.matsDao();
+            progressDao = db.progressDao();
+            ownedprogressDao = db.ownedprogressDao();
         }
 
         @Override

@@ -26,7 +26,7 @@ public class progress extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        final BdomatsAdapter adapter = new BdomatsAdapter(mats);
+        final MaterialAdapter adapter = new MaterialAdapter(mats);
         recyclerView.setAdapter(adapter);
     }
 }

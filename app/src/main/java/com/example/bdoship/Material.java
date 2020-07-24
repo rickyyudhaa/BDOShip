@@ -16,17 +16,19 @@ public class Material {
 
     private String image;
 
-    private int price;
+    private int price, qtyperday;
 
     private boolean barter, daily, coin;
 
-    public Material(String name, String image, int price, boolean barter, boolean daily, boolean coin) {
+    // todo masukin qty ke cons
+    public Material(String name, String image, int price, boolean barter, boolean daily, boolean coin, int qtyperday) {
         this.name = name;
         this.image = image;
         this.price = price;
         this.barter = barter;
         this.daily = daily;
         this.coin = coin;
+        this.qtyperday = qtyperday;
     }
 
     public int getId() {
@@ -59,5 +61,9 @@ public class Material {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getQtyperday() {
+        return qtyperday;
     }
 }

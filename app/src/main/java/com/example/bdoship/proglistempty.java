@@ -19,7 +19,7 @@ public class proglistempty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 /*Intent intent = new Intent(proglistempty.this, chooseship.class);*/
-                Intent intent = new Intent(proglistempty.this, progress.class);
+                Intent intent = new Intent(proglistempty.this, chooseship.class);
                 startActivity(intent);
             }
         });

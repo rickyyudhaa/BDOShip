@@ -17,8 +17,9 @@
     <string name="cannon">Cannons : </string>
     <string name="reload">Reload Time : </string>
     <string name="percentage">175%</string>
-    <string name="digit5">99999</string>
+    <string name="digit2">99</string>
     <string name="digit3">999</string>
+    <string name="digit5">99999</string>
     <string name="by">Created by Karata (SEA)</string>
     <string name="mats_name">Deep Tide-Dyed Standardized Timber Square</string>
     <string name="have">Have</string>
@@ -26,5 +27,8 @@
     <string name="dailies">Dailies Left</string>
     <string name="coins">Coins Left</string>
     <string name="how">How To Get</string>
+    <string name="dLefttext">Dailies Left :</string>
+    <string name="progresstext">Progress :</string>
+    <string name="days">Days</string>
     
 </resources>

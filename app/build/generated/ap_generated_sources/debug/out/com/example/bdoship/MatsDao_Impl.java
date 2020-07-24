@@ -22,7 +22,7 @@ public final class MatsDao_Impl implements MatsDao {
     this.__insertionAdapterOfMaterial = new EntityInsertionAdapter<Material>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `material_table`(`id`,`name`,`image`,`price`,`barter`,`daily`,`coin`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `material_table`(`id`,`name`,`image`,`price`,`qtyperday`,`barter`,`daily`,`coin`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -39,15 +39,16 @@ public final class MatsDao_Impl implements MatsDao {
           stmt.bindString(3, value.getImage());
         }
         stmt.bindLong(4, value.getPrice());
+        stmt.bindLong(5, value.getQtyperday());
         final int _tmp;
         _tmp = value.isBarter() ? 1 : 0;
-        stmt.bindLong(5, _tmp);
+        stmt.bindLong(6, _tmp);
         final int _tmp_1;
         _tmp_1 = value.isDaily() ? 1 : 0;
-        stmt.bindLong(6, _tmp_1);
+        stmt.bindLong(7, _tmp_1);
         final int _tmp_2;
         _tmp_2 = value.isCoin() ? 1 : 0;
-        stmt.bindLong(7, _tmp_2);
+        stmt.bindLong(8, _tmp_2);
       }
     };
   }
@@ -73,6 +74,7 @@ public final class MatsDao_Impl implements MatsDao {
       final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
       final int _cursorIndexOfImage = _cursor.getColumnIndexOrThrow("image");
       final int _cursorIndexOfPrice = _cursor.getColumnIndexOrThrow("price");
+      final int _cursorIndexOfQtyperday = _cursor.getColumnIndexOrThrow("qtyperday");
       final int _cursorIndexOfBarter = _cursor.getColumnIndexOrThrow("barter");
       final int _cursorIndexOfDaily = _cursor.getColumnIndexOrThrow("daily");
       final int _cursorIndexOfCoin = _cursor.getColumnIndexOrThrow("coin");
@@ -85,6 +87,8 @@ public final class MatsDao_Impl implements MatsDao {
         _tmpImage = _cursor.getString(_cursorIndexOfImage);
         final int _tmpPrice;
         _tmpPrice = _cursor.getInt(_cursorIndexOfPrice);
+        final int _tmpQtyperday;
+        _tmpQtyperday = _cursor.getInt(_cursorIndexOfQtyperday);
         final boolean _tmpBarter;
         final int _tmp;
         _tmp = _cursor.getInt(_cursorIndexOfBarter);
@@ -97,7 +101,7 @@ public final class MatsDao_Impl implements MatsDao {
         final int _tmp_2;
         _tmp_2 = _cursor.getInt(_cursorIndexOfCoin);
         _tmpCoin = _tmp_2 != 0;
-        _item = new Material(_tmpName,_tmpImage,_tmpPrice,_tmpBarter,_tmpDaily,_tmpCoin);
+        _item = new Material(_tmpName,_tmpImage,_tmpPrice,_tmpBarter,_tmpDaily,_tmpCoin,_tmpQtyperday);
         final int _tmpId;
         _tmpId = _cursor.getInt(_cursorIndexOfId);
         _item.setId(_tmpId);

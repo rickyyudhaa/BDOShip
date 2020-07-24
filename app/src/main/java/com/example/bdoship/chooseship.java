@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class chooseship extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        final BdoshipAdapter adapter = new BdoshipAdapter(ships);
+        final ShipAdapter adapter = new ShipAdapter(ships,getApplicationContext());
         recyclerView.setAdapter(adapter);
 
     }
