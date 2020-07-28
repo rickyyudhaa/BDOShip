@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bgvolante"
     android:padding="10dp"
-    tools:context=".proglist">
+    tools:context=".activity.proglist">
 
     <TextView
-        android:id="@+id/proglist_title"
+        android:id="@+id/ownedlist_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -23,12 +23,26 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcship"
+        android:id="@+id/owned_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/proglist_title"
+        android:layout_below="@id/ownedlist_title"
         android:layout_marginTop="40dp"
         tools:listitem="@layout/owned_list"
         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_baseline_add_40"
+        android:background="@drawable/roundedbtn"
+        android:backgroundTint="#2f2f2f"
+        android:layout_margin="@dimen/dp30"
+        />
+
 
 </RelativeLayout>

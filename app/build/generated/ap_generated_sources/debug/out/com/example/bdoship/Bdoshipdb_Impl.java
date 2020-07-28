@@ -16,7 +16,6 @@ import java.lang.IllegalStateException;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -32,15 +31,15 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(5) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `ship_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT, `material` TEXT, `inventory` INTEGER NOT NULL, `cabins` INTEGER NOT NULL, `cannonballs` INTEGER NOT NULL, `cannons` INTEGER NOT NULL, `lt` INTEGER NOT NULL, `speed` INTEGER NOT NULL, `turn` INTEGER NOT NULL, `accel` INTEGER NOT NULL, `brake` INTEGER NOT NULL, `reload` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ship_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT, `material` TEXT, `icon` INTEGER NOT NULL, `inventory` INTEGER NOT NULL, `cabins` INTEGER NOT NULL, `cannonballs` INTEGER NOT NULL, `cannons` INTEGER NOT NULL, `lt` INTEGER NOT NULL, `speed` INTEGER NOT NULL, `turn` INTEGER NOT NULL, `accel` INTEGER NOT NULL, `brake` INTEGER NOT NULL, `reload` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `progressentity_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_material` INTEGER NOT NULL, `haveMaterial` INTEGER NOT NULL, `reqMaterial` INTEGER NOT NULL, `id_ship` INTEGER NOT NULL)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `material_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `image` TEXT, `price` INTEGER NOT NULL, `qtyperday` INTEGER NOT NULL, `barter` INTEGER NOT NULL, `daily` INTEGER NOT NULL, `coin` INTEGER NOT NULL, FOREIGN KEY(`id`) REFERENCES `ship_table`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `material_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `image` INTEGER NOT NULL, `price` INTEGER NOT NULL, `qtyperday` INTEGER NOT NULL, `barter` INTEGER NOT NULL, `daily` INTEGER NOT NULL, `coin` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `ownedprogress_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_ship` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"91769b4da01df49082089d9e4e1e0c0f\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"33fe016b00e9c47fc3cace6de3178489\")");
       }
 
       @Override
@@ -63,7 +62,6 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
       @Override
       public void onOpen(SupportSQLiteDatabase _db) {
         mDatabase = _db;
-        _db.execSQL("PRAGMA foreign_keys = ON");
         internalInitInvalidationTracker(_db);
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
@@ -74,10 +72,11 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
 
       @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsShipTable = new HashMap<String, TableInfo.Column>(13);
+        final HashMap<String, TableInfo.Column> _columnsShipTable = new HashMap<String, TableInfo.Column>(14);
         _columnsShipTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
         _columnsShipTable.put("type", new TableInfo.Column("type", "TEXT", false, 0));
         _columnsShipTable.put("material", new TableInfo.Column("material", "TEXT", false, 0));
+        _columnsShipTable.put("icon", new TableInfo.Column("icon", "INTEGER", true, 0));
         _columnsShipTable.put("inventory", new TableInfo.Column("inventory", "INTEGER", true, 0));
         _columnsShipTable.put("cabins", new TableInfo.Column("cabins", "INTEGER", true, 0));
         _columnsShipTable.put("cannonballs", new TableInfo.Column("cannonballs", "INTEGER", true, 0));
@@ -115,14 +114,13 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
         final HashMap<String, TableInfo.Column> _columnsMaterialTable = new HashMap<String, TableInfo.Column>(8);
         _columnsMaterialTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
         _columnsMaterialTable.put("name", new TableInfo.Column("name", "TEXT", false, 0));
-        _columnsMaterialTable.put("image", new TableInfo.Column("image", "TEXT", false, 0));
+        _columnsMaterialTable.put("image", new TableInfo.Column("image", "INTEGER", true, 0));
         _columnsMaterialTable.put("price", new TableInfo.Column("price", "INTEGER", true, 0));
         _columnsMaterialTable.put("qtyperday", new TableInfo.Column("qtyperday", "INTEGER", true, 0));
         _columnsMaterialTable.put("barter", new TableInfo.Column("barter", "INTEGER", true, 0));
         _columnsMaterialTable.put("daily", new TableInfo.Column("daily", "INTEGER", true, 0));
         _columnsMaterialTable.put("coin", new TableInfo.Column("coin", "INTEGER", true, 0));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysMaterialTable = new HashSet<TableInfo.ForeignKey>(1);
-        _foreignKeysMaterialTable.add(new TableInfo.ForeignKey("ship_table", "NO ACTION", "NO ACTION",Arrays.asList("id"), Arrays.asList("id")));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysMaterialTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesMaterialTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoMaterialTable = new TableInfo("material_table", _columnsMaterialTable, _foreignKeysMaterialTable, _indicesMaterialTable);
         final TableInfo _existingMaterialTable = TableInfo.read(_db, "material_table");
@@ -144,7 +142,7 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
                   + " Found:\n" + _existingOwnedprogressTable);
         }
       }
-    }, "91769b4da01df49082089d9e4e1e0c0f", "69f6f63626fe67441867b5b8d1d29d4d");
+    }, "33fe016b00e9c47fc3cace6de3178489", "d70a7217fd5fc9bf97d2332782886d45");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -162,15 +160,8 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
   public void clearAllTables() {
     super.assertNotMainThread();
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
-    boolean _supportsDeferForeignKeys = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP;
     try {
-      if (!_supportsDeferForeignKeys) {
-        _db.execSQL("PRAGMA foreign_keys = FALSE");
-      }
       super.beginTransaction();
-      if (_supportsDeferForeignKeys) {
-        _db.execSQL("PRAGMA defer_foreign_keys = TRUE");
-      }
       _db.execSQL("DELETE FROM `ship_table`");
       _db.execSQL("DELETE FROM `progressentity_table`");
       _db.execSQL("DELETE FROM `material_table`");
@@ -178,9 +169,6 @@ public final class Bdoshipdb_Impl extends Bdoshipdb {
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
-      if (!_supportsDeferForeignKeys) {
-        _db.execSQL("PRAGMA foreign_keys = TRUE");
-      }
       _db.query("PRAGMA wal_checkpoint(FULL)").close();
       if (!_db.inTransaction()) {
         _db.execSQL("VACUUM");

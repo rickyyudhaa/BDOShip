@@ -1,0 +1,58 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.odlytium.bdoship"
+4    android:versionCode="2"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->E:\BDOShip\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->E:\BDOShip\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->E:\BDOShip\app\src\main\AndroidManifest.xml:5:5-23:19
+12        android:allowBackup="true"
+12-->E:\BDOShip\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:18-86
+14        android:extractNativeLibs="false"
+15        android:icon="@drawable/icon_bdoship_square"
+15-->E:\BDOShip\app\src\main\AndroidManifest.xml:7:9-53
+16        android:label="@string/app_name"
+16-->E:\BDOShip\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@drawable/icon_bdoship_round"
+17-->E:\BDOShip\app\src\main\AndroidManifest.xml:9:9-57
+18        android:supportsRtl="true"
+18-->E:\BDOShip\app\src\main\AndroidManifest.xml:10:9-35
+19        android:theme="@style/AppTheme" >
+19-->E:\BDOShip\app\src\main\AndroidManifest.xml:11:9-40
+20        <activity android:name="com.odlytium.bdoship.activity.progress" />
+20-->E:\BDOShip\app\src\main\AndroidManifest.xml:12:9-84
+20-->E:\BDOShip\app\src\main\AndroidManifest.xml:12:19-72
+21        <activity android:name="com.odlytium.bdoship.activity.chooseship" />
+21-->E:\BDOShip\app\src\main\AndroidManifest.xml:13:9-77
+21-->E:\BDOShip\app\src\main\AndroidManifest.xml:13:19-74
+22        <activity android:name="com.odlytium.bdoship.activity.proglist" />
+22-->E:\BDOShip\app\src\main\AndroidManifest.xml:14:9-75
+22-->E:\BDOShip\app\src\main\AndroidManifest.xml:14:19-72
+23        <activity android:name="com.odlytium.bdoship.activity.proglistempty" />
+23-->E:\BDOShip\app\src\main\AndroidManifest.xml:15:9-80
+23-->E:\BDOShip\app\src\main\AndroidManifest.xml:15:19-77
+24        <activity android:name="com.odlytium.bdoship.activity.MainActivity" >
+24-->E:\BDOShip\app\src\main\AndroidManifest.xml:16:9-22:20
+24-->E:\BDOShip\app\src\main\AndroidManifest.xml:16:19-76
+25            <intent-filter>
+25-->E:\BDOShip\app\src\main\AndroidManifest.xml:17:13-21:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->E:\BDOShip\app\src\main\AndroidManifest.xml:18:17-69
+26-->E:\BDOShip\app\src\main\AndroidManifest.xml:18:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->E:\BDOShip\app\src\main\AndroidManifest.xml:20:17-77
+28-->E:\BDOShip\app\src\main\AndroidManifest.xml:20:27-74
+29            </intent-filter>
+30        </activity>
+31    </application>
+32
+33</manifest>

@@ -14,10 +14,11 @@ public class Ship {
 
     private String type, material;
 
-    private int inventory, cabins, cannonballs, cannons, lt, speed, turn, accel, brake, reload;
+    private int icon, inventory, cabins, cannonballs, cannons, lt, speed, turn, accel, brake, reload;
 
-    public Ship(String type, String material, int inventory, int cabins, int cannonballs, int cannons, int lt, int speed, int turn, int accel, int brake, int reload) {
+    public Ship(String type, String material, int icon , int inventory, int cabins, int cannonballs, int cannons, int lt, int speed, int turn, int accel, int brake, int reload) {
         this.type = type;
+        this.icon = icon;
         this.material = material;
         this.inventory = inventory;
         this.cabins = cabins;
@@ -41,6 +42,10 @@ public class Ship {
 
     public String getMaterial() {
         return material;
+    }
+
+    public int getIcon() {
+        return icon;
     }
 
     public int getInventory() {

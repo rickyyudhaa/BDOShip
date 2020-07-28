@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.List;
@@ -12,6 +13,7 @@ public class chooseship extends AppCompatActivity {
 
     private Bdoshipdb dataBase;
     private List<Ship> ships;
+    private ShipAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,17 @@ public class chooseship extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        final ShipAdapter adapter = new ShipAdapter(ships,getApplicationContext());
+        adapter = new ShipAdapter(ships,getApplicationContext());
+        adapter.setSelectedlistener(new Onshipselectedlistener() {
+            @Override
+            public void shipselectedlistener(int id_ship) {
+                Intent intent = new Intent(chooseship.this, proglist.class);
+                intent.putExtra("id_ship", id_ship);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(adapter);
 
     }

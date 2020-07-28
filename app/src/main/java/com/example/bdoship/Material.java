@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 import java.sql.Blob;
 
-@Entity(tableName = "material_table", foreignKeys = @ForeignKey(entity = Ship.class, parentColumns = "id", childColumns = "id"))
+@Entity(tableName = "material_table")
 public class Material {
 
     @PrimaryKey(autoGenerate = true)
@@ -14,14 +14,13 @@ public class Material {
 
     private String name;
 
-    private String image;
+    private int image;
 
     private int price, qtyperday;
 
     private boolean barter, daily, coin;
 
-    // todo masukin qty ke cons
-    public Material(String name, String image, int price, boolean barter, boolean daily, boolean coin, int qtyperday) {
+    public Material(String name, int image, int price, boolean barter, boolean daily, boolean coin, int qtyperday) {
         this.name = name;
         this.image = image;
         this.price = price;
@@ -39,7 +38,7 @@ public class Material {
         return name;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 

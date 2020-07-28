@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bdoship"
+    package="com.odlytium.bdoship"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -13,17 +13,17 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_bdoship_square"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon_bdoship_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.bdoship.progress" />
-        <activity android:name="com.example.bdoship.chooseship" />
-        <activity android:name="com.example.bdoship.proglist" />
-        <activity android:name="com.example.bdoship.proglistempty" />
-        <activity android:name="com.example.bdoship.MainActivity" >
+        <activity android:name="com.odlytium.bdoship.activity.progress" />
+        <activity android:name="com.odlytium.bdoship.activity.chooseship" />
+        <activity android:name="com.odlytium.bdoship.activity.proglist" />
+        <activity android:name="com.odlytium.bdoship.activity.proglistempty" />
+        <activity android:name="com.odlytium.bdoship.activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,5 +1,125 @@
 [
     {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_sstalk.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_sstalk.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_volante.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_volante.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bdoship.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\bdoship.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_40.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\ic_baseline_add_40.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_advance.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_advance.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_balance.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_balance.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_bdoship_square.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_bdoship_square.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_eitcp.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_eitcp.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_gcannon.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_gcannon.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_background.xml.flat",
+        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundedmenu.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\roundedmenu.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_luminous.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_luminous.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_tds.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_tds.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_proglist.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_proglist.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_dtds.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_dtds.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bgadvance.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\bgadvance.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_save_5.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\ic_baseline_save_5.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bggroup.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\bggroup.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_ruddy.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_ruddy.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_purepearl.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_purepearl.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_valor.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_valor.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundedbtn10.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\roundedbtn10.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_gprow.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_gprow.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_save_15.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\ic_baseline_save_15.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_choose_ship.xml.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\choose_ship.xml"
     },
@@ -8,40 +128,52 @@
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_proglistempty.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bdoship.png.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\bdoship.png"
-    },
-    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_cprow.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_cprow.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_gplat.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_gplat.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_ccombat.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_ccombat.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_ship_list.xml.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\ship_list.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_godi.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_godi.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
         "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_fabric.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_fabric.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chooseship.xml.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_chooseship.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_background.xml.flat",
-        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_background.xml"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_pbeginner.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_pbeginner.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_30.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\ic_baseline_add_30.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_bdoship_round.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_bdoship_round.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
@@ -52,20 +184,36 @@
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\material_list.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_proglist.xml.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_proglist.xml"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_bpearl.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_bpearl.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_cplat.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_cplat.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_add.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\add.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bgvolante.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\bgvolante.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_brock.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_brock.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -84,16 +232,12 @@
         "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\roundedbtn.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
-    },
-    {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_progress.xml.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\activity_progress.xml"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_moon.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_moon.png"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -104,12 +248,12 @@
         "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\prog_list.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -120,15 +264,39 @@
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_gsail.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_gsail.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_plus.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\plus.png"
+    },
+    {
         "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "E:\\BDOShip\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\layout_mat_list.xml.flat",
-        "source": "E:\\BDOShip\\app\\src\\main\\res\\layout\\mat_list.xml"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_save_10.xml.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\ic_baseline_save_10.xml"
     },
     {
-        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "E:\\BDOShip\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_ccannon.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_ccannon.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_reef.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_reef.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_csail.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_csail.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_pexpert.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_pexpert.png"
+    },
+    {
+        "merged": "E:\\BDOShip\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_tear.png.flat",
+        "source": "E:\\BDOShip\\app\\src\\main\\res\\drawable\\icon_tear.png"
     }
 ]

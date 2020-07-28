@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Ship.class, ProgressEntity.class, Material.class, Ownedprogress.class}, version = 3)
+@Database(entities = {Ship.class, ProgressEntity.class, Material.class, Ownedprogress.class}, version = 5)
 public abstract class Bdoshipdb extends RoomDatabase{
 
     private static Bdoshipdb instance;

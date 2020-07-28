@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BDOShip</string>
     <string name="welcome_to">Welcome To</string>
-    <string name="no_prog">Currently You didn’t have any ship progress</string>
+    <string name="no_prog">Currently you didn’t have any ship progress</string>
     <string name="add">Add Progress</string>
     <string name="shipsprog">Your Ship Progress</string>
     <string name="shiptype">shiptype</string>
@@ -25,7 +25,7 @@
     <string name="have">Have</string>
     <string name="need">Need</string>
     <string name="dailies">Dailies Left</string>
-    <string name="coins">Coins Left</string>
+    <string name="coins">Material Price</string>
     <string name="how">How To Get</string>
     <string name="dLefttext">Dailies Left :</string>
     <string name="progresstext">Progress :</string>

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.bdoship",
+  "applicationId": "com.odlytium.bdoship",
   "variantName": "debug",
   "elements": [
     {

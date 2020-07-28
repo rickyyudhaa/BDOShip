@@ -24,12 +24,17 @@ public class ProgressEntity {
         return reqMaterial - haveMaterial;
     }
 
-    public double precentage(){
-        return ((double)haveMaterial / (double)reqMaterial)*100;
+    public int precentage(){
+        double persen = ((double)haveMaterial / (double)reqMaterial)*100;
+        return (int) persen;
     }
 
-    public int dailieleft(int qtyperday){
-        return need() - qtyperday;
+    public double dailieleft(int qtyperday){
+        if (qtyperday <= 0){
+            return 0;
+        }
+
+        return need() / qtyperday;
     }
 
     public int coinsleft(int price){
